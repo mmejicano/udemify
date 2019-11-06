@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand ml-4" href="">Udemify</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="">Cursos <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="">Snippets</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="">Recursos</a>
+      </li>
+    </ul>
+
+    <button (click)="salir()" class="btn btn-sm btn-outline-light my-2 my-sm-0">Logout</button>
+  </div>
+</nav>
+
+<div class="container my-4">
+  <div class="row">
+
+
+    <div class="col-lg py-2">
+      <plyr style="max-width: 720px;" controls plyrTitle="Video 1" [plyrPlaysInline]="true"
+        [plyrSources]="videoSources" (plyrInit)="player = $event" (plyrPlay)="played($event)"></plyr>
+
+        
+    <button class="btn btn-sm btn-success my-1" (click)="play()">Play</button>
+    <button class="btn btn-sm btn-secondary mx-2 my-1" (click)="stop()">Stop</button>
+
+    </div>
+    <div class="col-3-lg">
+        <div class="list-group shadow">
+            <span class="list-group-item list-group-item-action active">
+              Curso de VueJS 
+            </span>
+            <a (click)="cambiar('http://51.15.10.148/_cursos/vue-js-2-firebase-nuxt-js-%5b2019%5d-practico-desde-cero/3-introduccion-a-vuex/1-introduccion-a-vuex-(instalacion-con-cdn).mp4')" class="list-group-item list-group-item-action"> <input type="checkbox"> 1-introduccion-a-vuex-(instalacion-con-cdn)</a>
+            <a (click)="cambiar('http://51.15.10.148/_cursos/vue-js-2-firebase-nuxt-js-%5b2019%5d-practico-desde-cero/3-introduccion-a-vuex/2-mapstate-con-vuex.mp4')" class="list-group-item list-group-item-action"> <input type="checkbox"> 2-mapstate-con-vuex</a>
+            <a (click)="cambiar('http://51.15.10.148/_cursos/vue-js-2-firebase-nuxt-js-%5b2019%5d-practico-desde-cero/3-introduccion-a-vuex/3-mapmutation-y-parametros-adicionales.mp4')" class="list-group-item list-group-item-action"> <input type="checkbox"> 3-mapmutation-y-parametros-adicionales</a> 
+          </div>
+  
+      </div>
+
+  </div>
+
+</div>
